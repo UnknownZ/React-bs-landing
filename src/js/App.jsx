@@ -40,16 +40,18 @@ function App() {
 
   return (
     <>
-    <Navbar/>
-    <Jumbotron/>
-    <CardContainer>
-      {
-        tarjetas.map((item, index) => {
-          return <Card key={index} title={item.title} imageURL={item.imageURL} btnLabel={item.btnLabel} description={item.description} btnUrl={item.btnUrl}></Card>
-        })
-      }
-    </CardContainer>
-    <Footer/>
+      <Navbar />
+      <div className='container-fluid px-5'>
+        <Jumbotron />
+        <CardContainer>
+          {
+            tarjetas.map((item, index) => {
+              return <Card key={index} title={item.title} imageURL={item.imageURL} btnLabel={item.btnLabel} description={item.description} btnUrl={item.btnUrl}></Card>
+            })
+          }
+        </CardContainer>
+      </div>
+      <Footer />
     </>
   )
 }
